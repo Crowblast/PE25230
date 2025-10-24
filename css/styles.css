@@ -9,6 +9,12 @@
     padding: 0;
 }
 
+html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden; /* Oculta cualquier scroll horizontal */
+}
+
 html
 {
     scroll-behavior: smooth;
@@ -22,19 +28,20 @@ body
     color: #000000;
     padding: 0;
     margin: 0;
+
 }
 
 
 h1, h2, h3, h4 
 {
     font-family: 'Montserrat', sans-serif;
-    color: #a052a0af; /* Púrpura principal */
+    color: #a052a0af; 
 }
 
 a 
 {
     text-decoration: none;
-    color: #FF69B4; /* Pink secundario */
+    color: #FF69B4; 
 }
 
 .logo
@@ -132,8 +139,6 @@ section
 .eslogan-cont 
 {
   font-size: 2em;
-  position: relative;
-  z-index: 2; /* Para que esté por encima del overlay */
   color: white;
 }
 
@@ -141,7 +146,7 @@ section
 .eslogan-cont h2 
 {
     margin-top: 10px;
-    font-size: 4em;
+    font-size: 3em;
     color: #ffffff;
 }
 
@@ -351,16 +356,16 @@ section
 /* Media Query General (Móviles) */
 @media (max-width: 600px) 
 {
-    .main-header 
+    .header 
     {
         flex-direction: column;
     }
-    .main-nav ul 
+    .nav ul 
     {
         flex-wrap: wrap;
         justify-content: center;
     }
-    .main-nav ul li 
+    .nav ul li 
     {
         margin: 5px 10px;
     }
@@ -389,10 +394,3 @@ section
     }
 }
 
-@media (max-width: 420px) 
-{
-    *{
-        box-sizing: none;
-    }
-
-}
