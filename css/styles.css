@@ -1,0 +1,389 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+* 
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html
+{
+    scroll-behavior: smooth;
+}
+
+body 
+{
+    font-family: 'Roboto', serif; 
+    line-height: 1.6;
+    background-color: #00000088; 
+    color: #000000;
+    padding: 0;
+    margin: 0;
+}
+
+h1, h2, h3, h4 
+{
+    font-family: 'Montserrat', sans-serif;
+    color: #a052a0af; /* Púrpura principal */
+}
+
+a 
+{
+    text-decoration: none;
+    color: #FF69B4; /* Pink secundario */
+}
+
+.logo
+{
+    display: flex;
+    align-items: center;
+}
+
+.logo img
+{
+    border: 1px #FF69B4 solid;
+    border-radius: 100%;
+}
+
+
+section 
+{
+    padding: 60px 5%; 
+    background-color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.623);
+}
+
+.boton 
+{
+    display: inline-block;
+    background-color: #A052A0; /* Púrpura */
+    color: white;
+    padding: 12px 25px;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.boton:hover 
+{
+    background-color: #8A468A;
+}
+
+
+.header
+{
+    background: linear-gradient(135deg, #6a4ac2 0%, #ffffff 100%);
+    border-bottom: 3px solid #FFC0CB; /* Borde rosa claro */
+    padding: 15px 5%;
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    position: sticky; 
+    top: 0;
+    z-index: 1000;
+}
+
+.nav ul 
+{
+    list-style: none;
+    display: flex;
+}
+
+.nav ul li 
+{
+    margin-left: 20px;
+}
+
+.nav ul li a 
+{
+    font-weight: 700;
+    color: #555;
+    transition: color 0.3s;
+}
+
+.nav ul li a:hover 
+{
+    color: #FF69B4;
+}
+
+
+.eslogan 
+{
+    background-image: url('../assets/img/portada.jpg');
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
+    background-color: #000000;
+    width: 100%;
+    height: 700px;
+    padding: 100px 5%; 
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.664);
+    color: #000000;
+}
+
+.eslogan::before 
+{
+  content:"";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; 
+  height: 802px;
+  background-color: rgba(15, 7, 19, 0.5); /* Oscurece con transparencia */
+  z-index: 1;
+}
+
+.eslogan-cont 
+{
+  font-size: 2em;
+  position: relative;
+  z-index: 2; /* Para que esté por encima del overlay */
+  color: white;
+}
+
+
+.eslogan-cont h2 
+{
+    margin-top: 10px;
+    font-size: 4em;
+    color: #ffffff;
+}
+
+
+.products-section h3 
+{
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.products-container 
+{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap; /* Permite que las cards bajen en pantallas pequeñas */
+    justify-content: center;
+}
+
+.p_card 
+{
+    flex: 1 1 300px; 
+    padding: 25px;
+    border: 1px solid #FFC0CB;
+    border-radius: 8px;
+    text-align: center;
+    background-color: #fffafb;
+    transition: transform 0.3s;
+}
+
+.p_card:hover 
+{
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(160, 82, 160, 0.2);
+}
+
+#productos .img1
+{
+	transform: translate( 0, -50px );
+	width: 180px;
+	height: 180px;
+	border-radius: 180px;
+	border: 1px #ccc solid;
+	background: url('../assets/img/art.png') #fff no-repeat center center;
+	background-size: 100% auto;
+	box-shadow: 0 0 6px rgba(0,0,0,0.1);
+    margin: 0 auto;
+	
+}
+
+#productos .img2
+{
+	transform: translate( 0, -50px );
+    width: 180px;
+	height: 180px;
+	border-radius: 180px;
+	border: 1px #ccc solid;
+	background: url('../assets/img/gel.png') #fff no-repeat center center;
+	background-size: 100% auto;
+	box-shadow: 0 0 6px rgba(0,0,0,0.1);
+    margin: 0 auto;
+	
+}
+
+#productos .img3
+{
+	transform: translate( 0, -50px );
+    width: 180px;
+	height: 180px;
+	border-radius: 180px;
+	border: 1px #ccc solid;
+	background: url('../assets/img/manicura.png') #fff no-repeat center center;
+	background-size: 150% auto;
+	box-shadow: 0 0 6px rgba(0,0,0,0.1);
+    margin: 0 auto;
+	
+}
+
+.r_section h3 
+{
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.r_grid
+{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    gap: 30px;
+}
+
+.r_item 
+{
+    padding: 20px;
+    background-color: #fdf5ff; 
+    border-left: 5px solid #FF69B4; 
+    border-radius: 5px;
+}
+
+.r_item span 
+{
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #A052A0;
+    text-align: right;
+}
+
+
+.contact-section 
+{
+    background-color: #fefefe;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.contact-form 
+{
+    flex-direction: column;
+    flex: 2; /* Ocupa más espacio que la información de contacto */
+    min-width: 300px;
+}
+
+.contact-form label 
+{
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+
+.contact-form button 
+{
+  width: 30%;
+  margin-left: 20%;
+}
+
+
+.contact-form textarea,
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form input[type="submit"]
+{
+    width: 70%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: inherit;
+}
+
+.contact-info 
+{
+    display: inline-block;
+    color: rgb(0, 0, 0);
+    width: 30%;
+    margin-bottom: 15px;
+}
+
+.contact-info h4 
+{
+    margin-bottom: 10px;
+}
+
+.contact-info p
+{
+    padding: 10px;
+}
+
+.contact-info a
+{
+    color: #000000;
+    font-weight: bold;
+}
+
+/* Media Query para Contacto en móviles (Diseño Responsivo) */
+@media (max-width: 768px) 
+{
+
+    .contact-section 
+    {
+        flex-direction: column; 
+    }
+}
+
+.main-footer 
+{
+    height: 80px;
+    background-color: #333;
+    color: #eee;
+    text-align: center;
+    padding: 25px 0;
+}
+
+
+/* Media Query General (Móviles) */
+@media (max-width: 600px) 
+{
+    .main-header 
+    {
+        flex-direction: column;
+    }
+    .main-nav ul 
+    {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .main-nav ul li 
+    {
+        margin: 5px 10px;
+    }
+    .eslogan
+    {
+        background-size: cover;
+    }
+    .eslogan h2 
+    {
+        font-size: 2.5em;
+    }
+
+    .contact-form button,
+    .contact-form textarea,
+    .contact-form input[type="text"],
+    .contact-form input[type="email"],
+    .contact-form input[type="submit"]
+    {
+        width: 100%;
+        margin-left: 0;;
+    }
+
+    .contact-info 
+    {
+        width: 100%;
+    }
+}
