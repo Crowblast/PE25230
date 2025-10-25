@@ -86,21 +86,29 @@ section
 .header
 {
     background: linear-gradient(135deg, #6a4ac2 0%, #ffffff 100%);
-    border-bottom: 3px solid #FFC0CB; /* Borde rosa claro */
+    border-bottom: 3px solid #FFC0CB;
     padding: 15px 5%;
     display: flex; 
     justify-content: space-between;
     align-items: center;
     position: sticky; 
     top: 0;
+    position: fixed;
     z-index: 1000;
     width: 100%;
 }
 
-.nav ul 
-{
-    list-style: none;
-    display: flex;
+.nav {
+  overflow-x: auto;       
+  white-space: nowrap;    
+  max-width: 100%;        
+}
+
+.nav ul {
+  display: inline-flex;   
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .nav ul li 
@@ -356,10 +364,7 @@ section
 /* Media Query General (Móviles) */
 @media (max-width: 600px) 
 {
-    .header 
-    {
-        flex-direction: column;
-    }
+   
     .nav ul 
     {
         flex-wrap: wrap;
@@ -372,6 +377,7 @@ section
     .eslogan
     {
         background-size: cover;
+        height: 500px;
     }
     .eslogan h2 
     {
